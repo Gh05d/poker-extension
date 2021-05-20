@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Poker Extension",
+  "version": "1.0",
+  "description": "Adds blind levels to Poker Now",
+  "icons": { "48": "icons/gandalf-48.jpg" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.pokernow.club/games/*"],
+      "js": ["blinds.js"]
+    }
+  ],
+  "permissions": ["https://www.pokernow.club/games/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "poker-blinds-setter@gh05d.com"
+    }
+  }
+}
